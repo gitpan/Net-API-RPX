@@ -1,0 +1,25 @@
+---
+abstract: 'Perl interface to Janrain''s RPX service'
+author:
+  - 'Scott McWhirter <konobi@cpan.org>'
+build_requires:
+  Test::Exception: 0
+  Test::More: 0
+  mocked: 0
+distribution_type: module
+generated_by: 'Module::Install version 0.79'
+license: bsd
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Net-API-RPX
+no_index:
+  directory:
+    - inc
+    - t
+requires:
+  JSON::Any: 0
+  LWP::UserAgent: 0
+  Moose: 0.70
+  URI: 0
+version: 0.01
