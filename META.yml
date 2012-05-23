@@ -1,13 +1,18 @@
 ---
-abstract: 'Perl interface to Janrain''s RPX service'
+abstract: "Perl interface to Janrain's RPX service"
 author:
+  - 'Scott McWhirter, C<< <konobi at cpan.org> >>'
   - 'Scott McWhirter <konobi@cpan.org>'
 build_requires:
+  ExtUtils::MakeMaker: 6.36
   Test::Exception: 0
   Test::More: 0
   mocked: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.36
 distribution_type: module
-generated_by: 'Module::Install version 0.79'
+dynamic_config: 1
+generated_by: 'Module::Install version 1.06'
 license: bsd
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -21,5 +26,8 @@ requires:
   JSON::Any: 0
   LWP::UserAgent: 0
   Moose: 0.70
+  Throwable::Error: 0
   URI: 0
-version: 0.01
+resources:
+  license: http://opensource.org/licenses/bsd-license.php
+version: 0.02

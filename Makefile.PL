@@ -12,6 +12,7 @@ requires 'JSON::Any';
 requires 'LWP::UserAgent';
 requires 'Moose' => '0.70';
 requires 'URI';
+requires 'Throwable::Error';
 
 license 'bsd';
 
