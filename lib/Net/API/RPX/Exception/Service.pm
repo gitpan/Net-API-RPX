@@ -4,7 +4,7 @@ BEGIN {
   $Net::API::RPX::Exception::Service::AUTHORITY = 'cpan:KONOBI';
 }
 {
-  $Net::API::RPX::Exception::Service::VERSION = '0.03';
+  $Net::API::RPX::Exception::Service::VERSION = '0.04';
 }
 
 # ABSTRACT: A Class of exceptions for delivering problems from the RPX service.
@@ -53,7 +53,7 @@ Net::API::RPX::Exception::Service - A Class of exceptions for delivering problem
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 NAME
 

@@ -53,23 +53,23 @@
    "provides" : {
       "Net::API::RPX" : {
          "file" : "lib/Net/API/RPX.pm",
-         "version" : "0.03"
+         "version" : "0.04"
       },
       "Net::API::RPX::Exception" : {
          "file" : "lib/Net/API/RPX/Exception.pm",
-         "version" : "0.03"
+         "version" : "0.04"
       },
       "Net::API::RPX::Exception::Network" : {
          "file" : "lib/Net/API/RPX/Exception/Network.pm",
-         "version" : "0.03"
+         "version" : "0.04"
       },
       "Net::API::RPX::Exception::Service" : {
          "file" : "lib/Net/API/RPX/Exception/Service.pm",
-         "version" : "0.03"
+         "version" : "0.04"
       },
       "Net::API::RPX::Exception::Usage" : {
          "file" : "lib/Net/API/RPX/Exception/Usage.pm",
-         "version" : "0.03"
+         "version" : "0.04"
       }
    },
    "release_status" : "stable",
@@ -81,7 +81,7 @@
          "web" : "https://github.com/kentfredric/net-api-rpx"
       }
    },
-   "version" : "0.03",
+   "version" : "0.04",
    "x_BuiltWith" : {
       "modules" : {
          "Data::Dump" : "1.21",

@@ -4,7 +4,7 @@ BEGIN {
   $Net::API::RPX::Exception::Network::AUTHORITY = 'cpan:KONOBI';
 }
 {
-  $Net::API::RPX::Exception::Network::VERSION = '0.03';
+  $Net::API::RPX::Exception::Network::VERSION = '0.04';
 }
 
 # ABSTRACT: A Class of exceptions for network connectivitiy issues.
@@ -31,7 +31,7 @@ Net::API::RPX::Exception::Network - A Class of exceptions for network connectivi
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 AUTHORS
 

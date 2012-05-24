@@ -4,7 +4,7 @@ BEGIN {
   $Net::API::RPX::Exception::AUTHORITY = 'cpan:KONOBI';
 }
 {
-  $Net::API::RPX::Exception::VERSION = '0.03';
+  $Net::API::RPX::Exception::VERSION = '0.04';
 }
 
 # ABSTRACT:  A Baseclass for Net::API::RPX exceptions based on L<Throwable::X>
@@ -36,7 +36,7 @@ Net::API::RPX::Exception - A Baseclass for Net::API::RPX exceptions based on L<T
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 AUTHORS
 

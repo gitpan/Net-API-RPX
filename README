@@ -2,7 +2,7 @@ NAME
     Net::API::RPX - Perl interface to Janrain's RPX service
 
 VERSION
-    version 0.03
+    version 0.04
 
 SYNOPSIS
         use Net::API::RPX;

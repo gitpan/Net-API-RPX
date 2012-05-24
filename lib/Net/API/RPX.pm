@@ -4,7 +4,7 @@ BEGIN {
   $Net::API::RPX::AUTHORITY = 'cpan:KONOBI';
 }
 {
-  $Net::API::RPX::VERSION = '0.03';
+  $Net::API::RPX::VERSION = '0.04';
 }
 
 # ABSTRACT: Perl interface to Janrain's RPX service
@@ -197,7 +197,7 @@ Net::API::RPX - Perl interface to Janrain's RPX service
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 
