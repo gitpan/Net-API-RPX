@@ -1,18 +1,20 @@
-package Net::API::RPX::Exception::Service;
-
-# $Id:$
 use strict;
+package Net::API::RPX::Exception::Service;
+BEGIN {
+  $Net::API::RPX::Exception::Service::AUTHORITY = 'cpan:KONOBI';
+}
+{
+  $Net::API::RPX::Exception::Service::VERSION = '0.03';
+}
+
+# ABSTRACT: A Class of exceptions for delivering problems from the RPX service.
+
 use warnings;
 use Moose;
 use namespace::autoclean;
 
 extends 'Net::API::RPX::Exception';
 
-=head1 NAME
-
-Net::API::RPX::Exception::Service - A Class of exceptions for delivering problems from the RPX service.
-
-=cut
 
 my $rpx_errors = {
     -1 => 'Service Temporarily Unavailable',
@@ -40,4 +42,42 @@ sub _build_rpx_error_code_description {
 }
 __PACKAGE__->_immutable();
 1;
+
+
+__END__
+=pod
+
+=head1 NAME
+
+Net::API::RPX::Exception::Service - A Class of exceptions for delivering problems from the RPX service.
+
+=head1 VERSION
+
+version 0.03
+
+=head1 NAME
+
+=head1 AUTHORS
+
+=over 4
+
+=item *
+
+Scott McWhirter <konobi@cpan.org>
+
+=item *
+
+Kent Fredric <kentnl@cpan.org>
+
+=back
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2012 by Cloudtone Studios.
+
+This is free software, licensed under:
+
+  The (three-clause) BSD License
+
+=cut
 

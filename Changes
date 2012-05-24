@@ -1,11 +1,14 @@
 Revision history for Net-API-RPX
 
-0.02		2012-05-24
+0.03 2012-05-24T00:23:24Z
 
-        Added fully fledged exception objects to replace die() calls.
-        If you catch one somehow, you can now introspect them and get a better idea of what went wrong.
-          ( Kent Fredric )
+ - Toolkit switched to Dist::Zilla ( Kent Fredric )
 
-0.01    2009-02-20
-        First version.
+0.02 2012-05-23T23:31:00Z
+ - Added fully fledged exception objects to replace die() calls.
+ - If you catch one somehow, you can now introspect them and get a better
+   idea of what went wrong. ( Kent Fredric )
+
+0.01 2009-02-20T12:14:00Z
+ - First version.
 

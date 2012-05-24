@@ -1,20 +1,15 @@
-package Net::API::RPX::Exception;
-
-# $Id:$
 use strict;
+package Net::API::RPX::Exception;
+BEGIN {
+  $Net::API::RPX::Exception::AUTHORITY = 'cpan:KONOBI';
+}
+{
+  $Net::API::RPX::Exception::VERSION = '0.03';
+}
+
+# ABSTRACT:  A Baseclass for Net::API::RPX exceptions based on L<Throwable::X>
+
 use warnings;
-
-=head1 NAME
-
-Net::API::RPX::Exception - A Baseclass for Net::API::RPX exceptions based on L<Throwable::X>
-
-=cut
-
-=head1 DEBUGGING
-
-For complete backtraces in C<< die() >>, set C<< $ENV{NET_API_RPX_STACKTRACE} = 1 >>
-
-=cut
 
 use Moose;
 
@@ -30,4 +25,40 @@ sub _immutable {
 __PACKAGE__->_immutable;
 
 1;
+
+
+__END__
+=pod
+
+=head1 NAME
+
+Net::API::RPX::Exception - A Baseclass for Net::API::RPX exceptions based on L<Throwable::X>
+
+=head1 VERSION
+
+version 0.03
+
+=head1 AUTHORS
+
+=over 4
+
+=item *
+
+Scott McWhirter <konobi@cpan.org>
+
+=item *
+
+Kent Fredric <kentnl@cpan.org>
+
+=back
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2012 by Cloudtone Studios.
+
+This is free software, licensed under:
+
+  The (three-clause) BSD License
+
+=cut
 

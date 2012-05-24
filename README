@@ -1,36 +1,128 @@
-Net-API-RPX
+NAME
+    Net::API::RPX - Perl interface to Janrain's RPX service
 
-INSTALLATION
+VERSION
+    version 0.03
 
-To install this module, run the following commands:
+SYNOPSIS
+        use Net::API::RPX;
 
-	perl Makefile.PL
-	make
-	make test
-	make install
+        my $rpx = Net::API::RPX->new({ api_key => '<your_api_key_here>' });
 
-SUPPORT AND DOCUMENTATION
+        $rpx->auth_info({ token => $token });
 
-After installing, you can find documentation for this module with the
-perldoc command.
+DESCRIPTION
+    This module is a simple wrapper around Janrain's RPX service. RPX
+    provides a single method for dealing with third-party authentication.
 
-    perldoc Net::API::RPX
+    See <http://www.rpxnow.com> for more details.
 
-You can also look for information at:
+    For specific information regarding the RPX API and method arguments,
+    please refer to <https://rpxnow.com/docs>.
 
-    RT, CPAN's request tracker
-        http://rt.cpan.org/NoAuth/Bugs.html?Dist=Net-API-RPX
+ATTRIBUTES
+    This is a Moose based module, this classes attribtues are as so:
 
-    AnnoCPAN, Annotated CPAN documentation
-        http://annocpan.org/dist/Net-API-RPX
+  api_key
+    This is the api_key provided by Janrain to interface with RPX. You will
+    need to signup to RPX to get one of these.
 
-    CPAN Ratings
-        http://cpanratings.perl.org/d/Net-API-RPX
+  base_url
+    This is the base URL that is used to make API calls against. It defaults
+    to the RPX v2 API.
 
-    Search CPAN
-        http://search.cpan.org/dist/Net-API-RPX
+  ua
+    This is a LWP::UserAgent object. You may override it if you require more
+    fine grain control over remote queries.
 
-COPYRIGHT AND LICENCE
+METHODS
+  auth_info
+        my $user_data = $rpx->auth_info({ token => $params{token} });
 
-Copyright (C) 2009 Cloudtone Studios
+    Upon redirection back from RPX, you will be supplied a token to use for
+    verification. Call auth_info to verify the authenticity of the token and
+    gain user details.
+
+    'token' argument is required, 'extended' argument is optional.
+
+  map
+        $rpx->map({ identifier => 'yet.another.open.id', primary_key => 12 });
+
+    This method allows you to map more than one 'identifier' to a user.
+
+    'identifier' argument is required, 'primary_key' argument is required,
+    'overwrite' is optional.
+
+  unmap
+        $rpx->unmap({ identifier => 'yet.another.open.id', primary_key => 12 });
+
+    This is the inverse of 'map'.
+
+    'identifier' argument is required, 'primary_key' argument is required.
+
+  mappings
+        my $data = $rpx->mappings({ primary_key => 12 });
+
+    This method returns information about the identifiers associated with a
+    user.
+
+    'primary_key' argument is required.
+
+TEST COVERAGE
+    This distribution is heavily unit and system tested for compatability
+    with Test::Builder. If you come across any bugs, please send me or
+    submit failing tests to Net-API-RPX RT queue. Please see the 'SUPPORT'
+    section below on how to supply these.
+
+     ---------------------------- ------ ------ ------ ------ ------ ------ ------
+     File                           stmt   bran   cond    sub    pod   time  total
+     ---------------------------- ------ ------ ------ ------ ------ ------ ------
+     blib/lib/Net/API/RPX.pm       100.0  100.0    n/a  100.0  100.0  100.0  100.0
+     Total                         100.0  100.0    n/a  100.0  100.0  100.0  100.0
+     ---------------------------- ------ ------ ------ ------ ------ ------ ------
+
+BUGS
+    Please report any bugs or feature requests to "bug-net-api-rpx at
+    rt.cpan.org", or through the web interface at
+    <http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Net-API-RPX>. I will be
+    notified, and then you'll automatically be notified of progress on your
+    bug as I make changes.
+
+SUPPORT
+    You can find documentation for this module with the perldoc command.
+
+        perldoc Net::API::RPX
+
+    You can also look for information at:
+
+    *   RT: CPAN's request tracker
+
+        <http://rt.cpan.org/NoAuth/Bugs.html?Dist=Net-API-RPX>
+
+    *   AnnoCPAN: Annotated CPAN documentation
+
+        <http://annocpan.org/dist/Net-API-RPX>
+
+    *   CPAN Ratings
+
+        <http://cpanratings.perl.org/d/Net-API-RPX>
+
+    *   Search CPAN
+
+        <http://search.cpan.org/dist/Net-API-RPX>
+
+SEE ALSO
+    <http://www.janrain.com/>, <http://www.rpxnow.com/>
+
+AUTHORS
+    *   Scott McWhirter <konobi@cpan.org>
+
+    *   Kent Fredric <kentnl@cpan.org>
+
+COPYRIGHT AND LICENSE
+    This software is Copyright (c) 2012 by Cloudtone Studios.
+
+    This is free software, licensed under:
+
+      The (three-clause) BSD License
 
